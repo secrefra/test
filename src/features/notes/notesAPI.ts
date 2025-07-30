@@ -1,4 +1,3 @@
-// src/features/notes/notesApi.ts
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 const baseQuery = fetchBaseQuery({
@@ -40,7 +39,6 @@ export const notesApi = createApi({
       }),
     }),
 
-    // ✅ Nouveau endpoint pour récupérer une note spécifique par son ID
     getNoteById: builder.query<any, string>({
       query: (id) => `/note/${id}`, 
     }),
